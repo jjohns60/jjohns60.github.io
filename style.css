@@ -3,11 +3,22 @@
     #697488; pale sky - light gray color
     #DOD1D3; iron - light gray/tan color
     #AFC0D3; casper - gray blue color
-    whitesmoke; off-white
+    #f5f5f5, rgb(245,245,245) whitesmoke; off-white
     black; black
 */
 
-/* Add a dark background color to the top navigation */
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+
+/* TOP NAVIGATION BAR */
+/* Create background color for top navigation bar */
 .topnav {
     background-color: whitesmoke;
     overflow: hidden;
@@ -38,4 +49,235 @@
     color: whitesmoke;
   }
 
-  * {box-sizing:border-box}
+  .topnav-right-side {
+    background-color: whitesmoke;
+    overflow: hidden;
+  }
+
+  .topnav-right-side a {
+    float: right;
+    color: #232020;
+    text-align: right;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-weight: bold;
+    font-variant: small-caps;
+    padding: 20px 75px;
+    text-decoration: none;
+    font-size: 22px;
+  }
+
+  .disabled {
+    pointer-events: none;  /* <----------- */
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*width: 60%;*/
+  }
+
+  /* Center website */
+  .main {
+    max-width: 90%;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 50px;
+    font-variant: small-caps;
+    word-break: break-all;
+  }
+
+  h2 {
+    font-size: 25px;
+    font-variant: small-caps;
+    word-break: break-all;
+  }
+
+  /*
+  .module h2 {
+    font-size: 1.5em;
+    font-variant: small-caps;
+    word-break: break-all;
+    container-name: sidebar
+  }
+
+  
+  @container sidebar (min-width: 1200px) {
+    .module h2 {
+      font-size: 1.25em;
+      font-variant: small-caps;
+      word-break: break-all;
+    }
+  }
+*/
+
+  p {
+    text-decoration: none;
+  }
+  
+  .row {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .row,
+  .row > .column4 {
+    padding: 8px;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column4 {
+    float: left;
+    width: 25%;
+  }
+
+  .row,
+  .row > .column7 {
+    padding: 8px;
+  }
+
+  .column7 {
+    float: left;
+    width: 14.28%;
+  }
+  
+  /* Clear floats after rows */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .row2 {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .row2,
+  .row2 > .column2 {
+    padding: 16px;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column2 {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after rows */
+  .row2:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column4 {
+      width: 50%;
+    }
+  }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column4 {
+      width: 100%;
+    }
+  }
+
+  /* Responsive layout - makes a four column-layout instead of 7 columns */
+  @media screen and (max-width: 900px) {
+    .column7 {
+      width: 25%;
+    }
+  }
+
+  /* Responsive layout - makes a two column-layout instead of 7 columns */
+  @media screen and (max-width: 600px) {
+    .column7 {
+      width: 50%;
+    }
+  }
+
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column2 {
+      width: 100%;
+    }
+  }
+
+
+  /* Content - creates border around all content objects on the page*/
+  /*
+  .content {
+    position: relative;
+    background-color: #232020;
+    padding: 10px;
+  }
+*/
+
+.box {
+  position: relative;
+  /*background-color: #232020;*/
+  background-color: rgba(245,245,245);
+  /*background-color: rgb(209,209,211);*/
+  padding: 15px;
+  border-radius: 3%;
+}
+
+.img__description__border {
+    position: absolute;
+    top: 30%;
+    bottom: 20%;
+    left: 5%;
+    right: 5%;
+    background: rgba(23,20,20,0.72);
+    color: whitesmoke;
+    visibility: hidden;
+    opacity: 0.5;
+    transition: all 0.5s linear 0.25s;
+    /*font-size: large;*/
+    text-decoration: none;
+}
+
+.img__description {
+    position: absolute;
+    top: 35%;
+    bottom: 25%;
+    left: 10%;
+    right: 10%;
+    /*background: rgba(23,20,20,0); */
+    /*background: #232020; */
+    color: whitesmoke;
+    visibility: hidden;
+    transition: all 0.5s linear 0.25s;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  }
+
+  .box:hover .img__description__border {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .box:hover .img__description {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  footer { 
+    display: table;
+    /*position: absolute; */
+    color: whitesmoke;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
